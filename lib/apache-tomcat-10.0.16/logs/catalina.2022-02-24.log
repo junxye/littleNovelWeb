@@ -1,0 +1,590 @@
+24-Feb-2022 19:31:06.079 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/10.0.16
+24-Feb-2022 19:31:06.084 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Jan 15 2022 13:19:56 UTC
+24-Feb-2022 19:31:06.084 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号:      10.0.16.0
+24-Feb-2022 19:31:06.085 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
+24-Feb-2022 19:31:06.086 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+24-Feb-2022 19:31:06.086 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+24-Feb-2022 19:31:06.086 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Program Files\Java\jdk1.8.0_261\jre
+24-Feb-2022 19:31:06.086 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    1.8.0_261-b12
+24-Feb-2022 19:31:06.087 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+24-Feb-2022 19:31:06.087 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:31:06.087 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:31:06.088 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.config.file=H:\Java Package\Tomcat\apache-tomcat-10.0.16\conf\logging.properties
+24-Feb-2022 19:31:06.088 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+24-Feb-2022 19:31:06.088 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djdk.tls.ephemeralDHKeySize=2048
+24-Feb-2022 19:31:06.088 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+24-Feb-2022 19:31:06.089 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dignore.endorsed.dirs=
+24-Feb-2022 19:31:06.089 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.base=H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:31:06.091 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.home=H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:31:06.091 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.io.tmpdir=H:\Java Package\Tomcat\apache-tomcat-10.0.16\temp
+24-Feb-2022 19:31:06.100 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 在java.library.path:[C:\Program Files\Java\jdk1.8.0_261\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\Anaconda\Anaconda\condabin;C:\Program Files\PlasticSCM5\server;C:\Program Files\PlasticSCM5\client;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_261\bin;C:\Program Files\Java\jdk1.8.0_261\jre\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;G:\MATLAB\runtime\win64;G:\MATLAB\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;J:\Git\Git\cmd;D:\Node\;";H:\Java Package\Tomcat\apache-tomcat-10.0.16\lib;H:\Java Package\Tomcat\apache-tomcat-10.0.16\bin;";J:\MySQL\mysql-8.0.27-winx64\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm1;C:\Users\Administrator\.dotnet\tools;D:\IntelliJ IDEA\IDEA\IntelliJ IDEA 2021.1\bin;D:\Anaconda\Anaconda;D:\Anaconda\Anaconda\Scripts;D:\Anaconda\Anaconda\Library\bin;D:\VScode\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;.]上找不到基于APR的Apache Tomcat本机库，该库允许在生产环境中获得最佳性能
+24-Feb-2022 19:31:06.366 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+24-Feb-2022 19:31:06.374 严重 [main] org.apache.catalina.util.LifecycleBase.handleSubClassException 初始化组件[Connector[HTTP/1.1-8080]]失败。
+	org.apache.catalina.LifecycleException: 协议处理程序初始化失败
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1055)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:556)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1042)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:747)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:769)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use: bind
+		at sun.nio.ch.Net.bind0(Native Method)
+		at sun.nio.ch.Net.bind(Net.java:444)
+		at sun.nio.ch.Net.bind(Net.java:436)
+		at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:225)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:244)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:199)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1184)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1197)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:580)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:82)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1052)
+		... 13 more
+24-Feb-2022 19:31:06.375 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[421]毫秒内初始化
+24-Feb-2022 19:31:06.393 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+24-Feb-2022 19:31:06.394 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/10.0.16]
+24-Feb-2022 19:31:06.402 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\docs]
+24-Feb-2022 19:31:06.878 警告 [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom 使用[SHA1PRNG]创建会话ID生成的SecureRandom实例花费了[307]毫秒。
+24-Feb-2022 19:31:06.912 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\docs]的部署已在[510]毫秒内完成
+24-Feb-2022 19:31:06.915 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\examples]
+24-Feb-2022 19:31:07.369 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\examples]的部署已在[455]毫秒内完成
+24-Feb-2022 19:31:07.385 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\host-manager]
+24-Feb-2022 19:31:07.442 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\host-manager]的部署已在[58]毫秒内完成
+24-Feb-2022 19:31:07.455 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\manager]
+24-Feb-2022 19:31:07.500 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\manager]的部署已在[45]毫秒内完成
+24-Feb-2022 19:31:07.512 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\ROOT]
+24-Feb-2022 19:31:07.537 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\ROOT]的部署已在[25]毫秒内完成
+24-Feb-2022 19:31:07.541 信息 [main] org.apache.catalina.startup.Catalina.start [1165]毫秒后服务器启动
+24-Feb-2022 19:31:07.547 严重 [main] org.apache.catalina.core.StandardServer.await 无法在地址[localhost]和端口[8005]上创建服务器关闭套接字（基本端口[8005]和偏移量[0]）
+	java.net.BindException: Address already in use: JVM_Bind
+		at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+		at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:102)
+		at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:513)
+		at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:180)
+		at java.net.ServerSocket.bind(ServerSocket.java:375)
+		at java.net.ServerSocket.<init>(ServerSocket.java:237)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:577)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:887)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:833)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+24-Feb-2022 19:31:07.553 信息 [main] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-8080"]
+24-Feb-2022 19:31:07.553 信息 [main] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+24-Feb-2022 19:31:07.569 信息 [main] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+24-Feb-2022 19:31:07.570 信息 [main] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8080"]
+24-Feb-2022 19:31:13.826 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/10.0.16
+24-Feb-2022 19:31:13.829 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Jan 15 2022 13:19:56 UTC
+24-Feb-2022 19:31:13.829 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号:      10.0.16.0
+24-Feb-2022 19:31:13.829 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
+24-Feb-2022 19:31:13.829 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+24-Feb-2022 19:31:13.829 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+24-Feb-2022 19:31:13.829 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Program Files\Java\jdk1.8.0_261\jre
+24-Feb-2022 19:31:13.830 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    1.8.0_261-b12
+24-Feb-2022 19:31:13.830 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+24-Feb-2022 19:31:13.830 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:31:13.830 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:31:13.830 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.config.file=H:\Java Package\Tomcat\apache-tomcat-10.0.16\conf\logging.properties
+24-Feb-2022 19:31:13.830 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+24-Feb-2022 19:31:13.830 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djdk.tls.ephemeralDHKeySize=2048
+24-Feb-2022 19:31:13.831 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+24-Feb-2022 19:31:13.831 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dignore.endorsed.dirs=
+24-Feb-2022 19:31:13.832 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.base=H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:31:13.833 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.home=H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:31:13.833 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.io.tmpdir=H:\Java Package\Tomcat\apache-tomcat-10.0.16\temp
+24-Feb-2022 19:31:13.844 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 在java.library.path:[C:\Program Files\Java\jdk1.8.0_261\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\Anaconda\Anaconda\condabin;C:\Program Files\PlasticSCM5\server;C:\Program Files\PlasticSCM5\client;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_261\bin;C:\Program Files\Java\jdk1.8.0_261\jre\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;G:\MATLAB\runtime\win64;G:\MATLAB\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;J:\Git\Git\cmd;D:\Node\;";H:\Java Package\Tomcat\apache-tomcat-10.0.16\lib;H:\Java Package\Tomcat\apache-tomcat-10.0.16\bin;";J:\MySQL\mysql-8.0.27-winx64\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm1;C:\Users\Administrator\.dotnet\tools;D:\IntelliJ IDEA\IDEA\IntelliJ IDEA 2021.1\bin;D:\Anaconda\Anaconda;D:\Anaconda\Anaconda\Scripts;D:\Anaconda\Anaconda\Library\bin;D:\VScode\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;.]上找不到基于APR的Apache Tomcat本机库，该库允许在生产环境中获得最佳性能
+24-Feb-2022 19:31:14.095 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+24-Feb-2022 19:31:14.103 严重 [main] org.apache.catalina.util.LifecycleBase.handleSubClassException 初始化组件[Connector[HTTP/1.1-8080]]失败。
+	org.apache.catalina.LifecycleException: 协议处理程序初始化失败
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1055)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:556)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1042)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:747)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:769)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use: bind
+		at sun.nio.ch.Net.bind0(Native Method)
+		at sun.nio.ch.Net.bind(Net.java:444)
+		at sun.nio.ch.Net.bind(Net.java:436)
+		at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:225)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:244)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:199)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1184)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1197)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:580)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:82)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1052)
+		... 13 more
+24-Feb-2022 19:31:14.105 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[428]毫秒内初始化
+24-Feb-2022 19:31:14.124 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+24-Feb-2022 19:31:14.127 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/10.0.16]
+24-Feb-2022 19:31:14.133 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\docs]
+24-Feb-2022 19:31:14.542 警告 [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom 使用[SHA1PRNG]创建会话ID生成的SecureRandom实例花费了[247]毫秒。
+24-Feb-2022 19:31:14.563 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\docs]的部署已在[430]毫秒内完成
+24-Feb-2022 19:31:14.563 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\examples]
+24-Feb-2022 19:31:14.986 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\examples]的部署已在[423]毫秒内完成
+24-Feb-2022 19:31:14.997 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\host-manager]
+24-Feb-2022 19:31:15.050 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\host-manager]的部署已在[53]毫秒内完成
+24-Feb-2022 19:31:15.061 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\manager]
+24-Feb-2022 19:31:15.109 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\manager]的部署已在[48]毫秒内完成
+24-Feb-2022 19:31:15.120 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\ROOT]
+24-Feb-2022 19:31:15.144 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\ROOT]的部署已在[23]毫秒内完成
+24-Feb-2022 19:31:15.147 信息 [main] org.apache.catalina.startup.Catalina.start [1040]毫秒后服务器启动
+24-Feb-2022 19:31:15.152 严重 [main] org.apache.catalina.core.StandardServer.await 无法在地址[localhost]和端口[8005]上创建服务器关闭套接字（基本端口[8005]和偏移量[0]）
+	java.net.BindException: Address already in use: JVM_Bind
+		at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+		at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:102)
+		at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:513)
+		at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:180)
+		at java.net.ServerSocket.bind(ServerSocket.java:375)
+		at java.net.ServerSocket.<init>(ServerSocket.java:237)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:577)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:887)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:833)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+24-Feb-2022 19:31:15.176 信息 [main] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-8080"]
+24-Feb-2022 19:31:15.177 信息 [main] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+24-Feb-2022 19:31:15.195 信息 [main] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+24-Feb-2022 19:31:15.197 信息 [main] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8080"]
+24-Feb-2022 19:31:35.958 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/10.0.16
+24-Feb-2022 19:31:35.961 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Jan 15 2022 13:19:56 UTC
+24-Feb-2022 19:31:35.961 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号:      10.0.16.0
+24-Feb-2022 19:31:35.962 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
+24-Feb-2022 19:31:35.962 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+24-Feb-2022 19:31:35.962 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+24-Feb-2022 19:31:35.962 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Program Files\Java\jdk1.8.0_261\jre
+24-Feb-2022 19:31:35.962 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    1.8.0_261-b12
+24-Feb-2022 19:31:35.962 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+24-Feb-2022 19:31:35.962 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:31:35.962 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:31:35.963 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.config.file=H:\Java Package\Tomcat\apache-tomcat-10.0.16\conf\logging.properties
+24-Feb-2022 19:31:35.963 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+24-Feb-2022 19:31:35.963 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djdk.tls.ephemeralDHKeySize=2048
+24-Feb-2022 19:31:35.963 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+24-Feb-2022 19:31:35.964 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dignore.endorsed.dirs=
+24-Feb-2022 19:31:35.964 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.base=H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:31:35.966 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.home=H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:31:35.966 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.io.tmpdir=H:\Java Package\Tomcat\apache-tomcat-10.0.16\temp
+24-Feb-2022 19:31:35.977 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 在java.library.path:[C:\Program Files\Java\jdk1.8.0_261\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\Anaconda\Anaconda\condabin;C:\Program Files\PlasticSCM5\server;C:\Program Files\PlasticSCM5\client;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_261\bin;C:\Program Files\Java\jdk1.8.0_261\jre\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;G:\MATLAB\runtime\win64;G:\MATLAB\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;J:\Git\Git\cmd;D:\Node\;";H:\Java Package\Tomcat\apache-tomcat-10.0.16\lib;H:\Java Package\Tomcat\apache-tomcat-10.0.16\bin;";J:\MySQL\mysql-8.0.27-winx64\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm1;C:\Users\Administrator\.dotnet\tools;D:\IntelliJ IDEA\IDEA\IntelliJ IDEA 2021.1\bin;D:\Anaconda\Anaconda;D:\Anaconda\Anaconda\Scripts;D:\Anaconda\Anaconda\Library\bin;D:\VScode\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;.]上找不到基于APR的Apache Tomcat本机库，该库允许在生产环境中获得最佳性能
+24-Feb-2022 19:31:36.214 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+24-Feb-2022 19:31:36.225 严重 [main] org.apache.catalina.util.LifecycleBase.handleSubClassException 初始化组件[Connector[HTTP/1.1-8080]]失败。
+	org.apache.catalina.LifecycleException: 协议处理程序初始化失败
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1055)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:556)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1042)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:747)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:769)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use: bind
+		at sun.nio.ch.Net.bind0(Native Method)
+		at sun.nio.ch.Net.bind(Net.java:444)
+		at sun.nio.ch.Net.bind(Net.java:436)
+		at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:225)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:244)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:199)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1184)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1197)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:580)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:82)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1052)
+		... 13 more
+24-Feb-2022 19:31:36.227 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[389]毫秒内初始化
+24-Feb-2022 19:31:36.258 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+24-Feb-2022 19:31:36.260 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/10.0.16]
+24-Feb-2022 19:31:36.273 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\docs]
+24-Feb-2022 19:31:36.709 警告 [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom 使用[SHA1PRNG]创建会话ID生成的SecureRandom实例花费了[274]毫秒。
+24-Feb-2022 19:31:36.746 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\docs]的部署已在[472]毫秒内完成
+24-Feb-2022 19:31:36.756 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\examples]
+24-Feb-2022 19:31:37.060 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\examples]的部署已在[304]毫秒内完成
+24-Feb-2022 19:31:37.070 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\host-manager]
+24-Feb-2022 19:31:37.104 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\host-manager]的部署已在[34]毫秒内完成
+24-Feb-2022 19:31:37.112 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\manager]
+24-Feb-2022 19:31:37.153 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\manager]的部署已在[40]毫秒内完成
+24-Feb-2022 19:31:37.164 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\ROOT]
+24-Feb-2022 19:31:37.193 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\ROOT]的部署已在[30]毫秒内完成
+24-Feb-2022 19:31:37.201 信息 [main] org.apache.catalina.startup.Catalina.start [973]毫秒后服务器启动
+24-Feb-2022 19:31:37.214 严重 [main] org.apache.catalina.core.StandardServer.await 无法在地址[localhost]和端口[8005]上创建服务器关闭套接字（基本端口[8005]和偏移量[0]）
+	java.net.BindException: Address already in use: JVM_Bind
+		at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+		at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:102)
+		at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:513)
+		at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:180)
+		at java.net.ServerSocket.bind(ServerSocket.java:375)
+		at java.net.ServerSocket.<init>(ServerSocket.java:237)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:577)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:887)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:833)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+24-Feb-2022 19:31:37.216 信息 [main] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-8080"]
+24-Feb-2022 19:31:37.217 信息 [main] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+24-Feb-2022 19:31:37.238 信息 [main] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+24-Feb-2022 19:31:37.247 信息 [main] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8080"]
+24-Feb-2022 19:32:10.474 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/10.0.16
+24-Feb-2022 19:32:10.479 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Jan 15 2022 13:19:56 UTC
+24-Feb-2022 19:32:10.479 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号:      10.0.16.0
+24-Feb-2022 19:32:10.479 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
+24-Feb-2022 19:32:10.479 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+24-Feb-2022 19:32:10.480 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+24-Feb-2022 19:32:10.480 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Program Files\Java\jdk1.8.0_261\jre
+24-Feb-2022 19:32:10.480 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    1.8.0_261-b12
+24-Feb-2022 19:32:10.480 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+24-Feb-2022 19:32:10.480 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:32:10.480 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:32:10.481 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.config.file=H:\Java Package\Tomcat\apache-tomcat-10.0.16\conf\logging.properties
+24-Feb-2022 19:32:10.481 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+24-Feb-2022 19:32:10.481 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djdk.tls.ephemeralDHKeySize=2048
+24-Feb-2022 19:32:10.481 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+24-Feb-2022 19:32:10.482 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dignore.endorsed.dirs=
+24-Feb-2022 19:32:10.482 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.base=H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:32:10.484 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.home=H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:32:10.484 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.io.tmpdir=H:\Java Package\Tomcat\apache-tomcat-10.0.16\temp
+24-Feb-2022 19:32:10.494 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 在java.library.path:[C:\Program Files\Java\jdk1.8.0_261\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\Anaconda\Anaconda\condabin;C:\Program Files\PlasticSCM5\server;C:\Program Files\PlasticSCM5\client;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_261\bin;C:\Program Files\Java\jdk1.8.0_261\jre\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;G:\MATLAB\runtime\win64;G:\MATLAB\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;J:\Git\Git\cmd;D:\Node\;";H:\Java Package\Tomcat\apache-tomcat-10.0.16\lib;H:\Java Package\Tomcat\apache-tomcat-10.0.16\bin;";J:\MySQL\mysql-8.0.27-winx64\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm1;C:\Users\Administrator\.dotnet\tools;D:\IntelliJ IDEA\IDEA\IntelliJ IDEA 2021.1\bin;D:\Anaconda\Anaconda;D:\Anaconda\Anaconda\Scripts;D:\Anaconda\Anaconda\Library\bin;D:\VScode\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;.]上找不到基于APR的Apache Tomcat本机库，该库允许在生产环境中获得最佳性能
+24-Feb-2022 19:32:10.748 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+24-Feb-2022 19:32:10.757 严重 [main] org.apache.catalina.util.LifecycleBase.handleSubClassException 初始化组件[Connector[HTTP/1.1-8080]]失败。
+	org.apache.catalina.LifecycleException: 协议处理程序初始化失败
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1055)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:556)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1042)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:747)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:769)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use: bind
+		at sun.nio.ch.Net.bind0(Native Method)
+		at sun.nio.ch.Net.bind(Net.java:444)
+		at sun.nio.ch.Net.bind(Net.java:436)
+		at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:225)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:244)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:199)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1184)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1197)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:580)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:82)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1052)
+		... 13 more
+24-Feb-2022 19:32:10.759 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[409]毫秒内初始化
+24-Feb-2022 19:32:10.778 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+24-Feb-2022 19:32:10.778 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/10.0.16]
+24-Feb-2022 19:32:10.785 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\docs]
+24-Feb-2022 19:32:11.181 警告 [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom 使用[SHA1PRNG]创建会话ID生成的SecureRandom实例花费了[246]毫秒。
+24-Feb-2022 19:32:11.200 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\docs]的部署已在[414]毫秒内完成
+24-Feb-2022 19:32:11.200 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\examples]
+24-Feb-2022 19:32:11.450 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\examples]的部署已在[250]毫秒内完成
+24-Feb-2022 19:32:11.459 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\host-manager]
+24-Feb-2022 19:32:11.484 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\host-manager]的部署已在[25]毫秒内完成
+24-Feb-2022 19:32:11.484 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\manager]
+24-Feb-2022 19:32:11.520 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\manager]的部署已在[36]毫秒内完成
+24-Feb-2022 19:32:11.522 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\ROOT]
+24-Feb-2022 19:32:11.549 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\ROOT]的部署已在[26]毫秒内完成
+24-Feb-2022 19:32:11.552 信息 [main] org.apache.catalina.startup.Catalina.start [793]毫秒后服务器启动
+24-Feb-2022 19:32:11.558 严重 [main] org.apache.catalina.core.StandardServer.await 无法在地址[localhost]和端口[8005]上创建服务器关闭套接字（基本端口[8005]和偏移量[0]）
+	java.net.BindException: Address already in use: JVM_Bind
+		at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+		at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:102)
+		at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:513)
+		at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:180)
+		at java.net.ServerSocket.bind(ServerSocket.java:375)
+		at java.net.ServerSocket.<init>(ServerSocket.java:237)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:577)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:887)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:833)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+24-Feb-2022 19:32:11.570 信息 [main] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-8080"]
+24-Feb-2022 19:32:11.571 信息 [main] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+24-Feb-2022 19:32:11.585 信息 [main] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+24-Feb-2022 19:32:11.587 信息 [main] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8080"]
+24-Feb-2022 19:41:35.757 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/10.0.16
+24-Feb-2022 19:41:35.760 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Jan 15 2022 13:19:56 UTC
+24-Feb-2022 19:41:35.760 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号:      10.0.16.0
+24-Feb-2022 19:41:35.760 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
+24-Feb-2022 19:41:35.760 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+24-Feb-2022 19:41:35.761 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+24-Feb-2022 19:41:35.761 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Program Files\Java\jdk1.8.0_261\jre
+24-Feb-2022 19:41:35.761 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    1.8.0_261-b12
+24-Feb-2022 19:41:35.761 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+24-Feb-2022 19:41:35.761 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:41:35.761 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:41:35.761 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.config.file=H:\Java Package\Tomcat\apache-tomcat-10.0.16\conf\logging.properties
+24-Feb-2022 19:41:35.761 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+24-Feb-2022 19:41:35.762 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djdk.tls.ephemeralDHKeySize=2048
+24-Feb-2022 19:41:35.762 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+24-Feb-2022 19:41:35.762 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dignore.endorsed.dirs=
+24-Feb-2022 19:41:35.763 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.base=H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:41:35.764 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.home=H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:41:35.764 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.io.tmpdir=H:\Java Package\Tomcat\apache-tomcat-10.0.16\temp
+24-Feb-2022 19:41:35.774 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 在java.library.path:[C:\Program Files\Java\jdk1.8.0_261\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\Anaconda\Anaconda\condabin;C:\Program Files\PlasticSCM5\server;C:\Program Files\PlasticSCM5\client;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_261\bin;C:\Program Files\Java\jdk1.8.0_261\jre\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;G:\MATLAB\runtime\win64;G:\MATLAB\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;J:\Git\Git\cmd;D:\Node\;";H:\Java Package\Tomcat\apache-tomcat-10.0.16\lib;H:\Java Package\Tomcat\apache-tomcat-10.0.16\bin;";J:\MySQL\mysql-8.0.27-winx64\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm1;C:\Users\Administrator\.dotnet\tools;D:\IntelliJ IDEA\IDEA\IntelliJ IDEA 2021.1\bin;D:\Anaconda\Anaconda;D:\Anaconda\Anaconda\Scripts;D:\Anaconda\Anaconda\Library\bin;D:\VScode\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;.]上找不到基于APR的Apache Tomcat本机库，该库允许在生产环境中获得最佳性能
+24-Feb-2022 19:41:36.010 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+24-Feb-2022 19:41:36.026 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[402]毫秒内初始化
+24-Feb-2022 19:41:36.046 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+24-Feb-2022 19:41:36.047 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/10.0.16]
+24-Feb-2022 19:41:36.057 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\docs]
+24-Feb-2022 19:41:36.481 警告 [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom 使用[SHA1PRNG]创建会话ID生成的SecureRandom实例花费了[268]毫秒。
+24-Feb-2022 19:41:36.501 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\docs]的部署已在[444]毫秒内完成
+24-Feb-2022 19:41:36.502 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\examples]
+24-Feb-2022 19:41:36.787 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\examples]的部署已在[285]毫秒内完成
+24-Feb-2022 19:41:36.798 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\host-manager]
+24-Feb-2022 19:41:36.834 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\host-manager]的部署已在[36]毫秒内完成
+24-Feb-2022 19:41:36.845 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\manager]
+24-Feb-2022 19:41:36.875 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\manager]的部署已在[30]毫秒内完成
+24-Feb-2022 19:41:36.877 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\ROOT]
+24-Feb-2022 19:41:36.898 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\ROOT]的部署已在[21]毫秒内完成
+24-Feb-2022 19:41:36.903 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8080"]
+24-Feb-2022 19:41:36.918 信息 [main] org.apache.catalina.startup.Catalina.start [891]毫秒后服务器启动
+24-Feb-2022 19:42:18.426 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/10.0.16
+24-Feb-2022 19:42:18.429 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Jan 15 2022 13:19:56 UTC
+24-Feb-2022 19:42:18.429 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号:      10.0.16.0
+24-Feb-2022 19:42:18.429 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
+24-Feb-2022 19:42:18.429 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+24-Feb-2022 19:42:18.429 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+24-Feb-2022 19:42:18.429 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Program Files\Java\jdk1.8.0_261\jre
+24-Feb-2022 19:42:18.429 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    1.8.0_261-b12
+24-Feb-2022 19:42:18.430 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+24-Feb-2022 19:42:18.430 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:42:18.430 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:42:18.430 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.config.file=H:\Java Package\Tomcat\apache-tomcat-10.0.16\conf\logging.properties
+24-Feb-2022 19:42:18.430 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+24-Feb-2022 19:42:18.430 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djdk.tls.ephemeralDHKeySize=2048
+24-Feb-2022 19:42:18.430 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+24-Feb-2022 19:42:18.431 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dignore.endorsed.dirs=
+24-Feb-2022 19:42:18.431 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.base=H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:42:18.433 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.home=H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:42:18.433 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.io.tmpdir=H:\Java Package\Tomcat\apache-tomcat-10.0.16\temp
+24-Feb-2022 19:42:18.443 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 在java.library.path:[C:\Program Files\Java\jdk1.8.0_261\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\Anaconda\Anaconda\condabin;C:\Program Files\PlasticSCM5\server;C:\Program Files\PlasticSCM5\client;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_261\bin;C:\Program Files\Java\jdk1.8.0_261\jre\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;G:\MATLAB\runtime\win64;G:\MATLAB\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;J:\Git\Git\cmd;D:\Node\;";H:\Java Package\Tomcat\apache-tomcat-10.0.16\lib;H:\Java Package\Tomcat\apache-tomcat-10.0.16\bin;";J:\MySQL\mysql-8.0.27-winx64\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm1;C:\Users\Administrator\.dotnet\tools;D:\IntelliJ IDEA\IDEA\IntelliJ IDEA 2021.1\bin;D:\Anaconda\Anaconda;D:\Anaconda\Anaconda\Scripts;D:\Anaconda\Anaconda\Library\bin;D:\VScode\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;.]上找不到基于APR的Apache Tomcat本机库，该库允许在生产环境中获得最佳性能
+24-Feb-2022 19:42:18.718 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+24-Feb-2022 19:42:18.731 严重 [main] org.apache.catalina.util.LifecycleBase.handleSubClassException 初始化组件[Connector[HTTP/1.1-8080]]失败。
+	org.apache.catalina.LifecycleException: 协议处理程序初始化失败
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1055)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:556)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1042)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:747)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:769)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use: bind
+		at sun.nio.ch.Net.bind0(Native Method)
+		at sun.nio.ch.Net.bind(Net.java:444)
+		at sun.nio.ch.Net.bind(Net.java:436)
+		at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:225)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:244)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:199)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1184)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1197)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:580)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:82)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1052)
+		... 13 more
+24-Feb-2022 19:42:18.733 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[430]毫秒内初始化
+24-Feb-2022 19:42:18.769 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+24-Feb-2022 19:42:18.770 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/10.0.16]
+24-Feb-2022 19:42:18.785 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\docs]
+24-Feb-2022 19:42:19.438 警告 [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom 使用[SHA1PRNG]创建会话ID生成的SecureRandom实例花费了[371]毫秒。
+24-Feb-2022 19:42:19.493 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\docs]的部署已在[708]毫秒内完成
+24-Feb-2022 19:42:19.504 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\examples]
+24-Feb-2022 19:42:19.926 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\examples]的部署已在[423]毫秒内完成
+24-Feb-2022 19:42:19.934 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\host-manager]
+24-Feb-2022 19:42:19.962 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\host-manager]的部署已在[28]毫秒内完成
+24-Feb-2022 19:42:19.972 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\manager]
+24-Feb-2022 19:42:19.992 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\manager]的部署已在[21]毫秒内完成
+24-Feb-2022 19:42:19.993 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\ROOT]
+24-Feb-2022 19:42:20.009 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\ROOT]的部署已在[16]毫秒内完成
+24-Feb-2022 19:42:20.017 信息 [main] org.apache.catalina.startup.Catalina.start [1284]毫秒后服务器启动
+24-Feb-2022 19:42:20.022 严重 [main] org.apache.catalina.core.StandardServer.await 无法在地址[localhost]和端口[8005]上创建服务器关闭套接字（基本端口[8005]和偏移量[0]）
+	java.net.BindException: Address already in use: JVM_Bind
+		at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+		at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:102)
+		at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:513)
+		at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:180)
+		at java.net.ServerSocket.bind(ServerSocket.java:375)
+		at java.net.ServerSocket.<init>(ServerSocket.java:237)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:577)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:887)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:833)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+24-Feb-2022 19:42:20.033 信息 [main] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-8080"]
+24-Feb-2022 19:42:20.033 信息 [main] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+24-Feb-2022 19:42:20.046 信息 [main] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+24-Feb-2022 19:42:20.047 信息 [main] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8080"]
+24-Feb-2022 19:42:23.952 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/10.0.16
+24-Feb-2022 19:42:23.955 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Jan 15 2022 13:19:56 UTC
+24-Feb-2022 19:42:23.955 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号:      10.0.16.0
+24-Feb-2022 19:42:23.955 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
+24-Feb-2022 19:42:23.956 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+24-Feb-2022 19:42:23.956 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+24-Feb-2022 19:42:23.956 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Program Files\Java\jdk1.8.0_261\jre
+24-Feb-2022 19:42:23.956 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    1.8.0_261-b12
+24-Feb-2022 19:42:23.956 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+24-Feb-2022 19:42:23.956 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:42:23.956 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:42:23.956 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.config.file=H:\Java Package\Tomcat\apache-tomcat-10.0.16\conf\logging.properties
+24-Feb-2022 19:42:23.957 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+24-Feb-2022 19:42:23.957 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djdk.tls.ephemeralDHKeySize=2048
+24-Feb-2022 19:42:23.957 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+24-Feb-2022 19:42:23.958 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dignore.endorsed.dirs=
+24-Feb-2022 19:42:23.959 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.base=H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:42:23.961 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.home=H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:42:23.961 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.io.tmpdir=H:\Java Package\Tomcat\apache-tomcat-10.0.16\temp
+24-Feb-2022 19:42:23.971 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 在java.library.path:[C:\Program Files\Java\jdk1.8.0_261\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\Anaconda\Anaconda\condabin;C:\Program Files\PlasticSCM5\server;C:\Program Files\PlasticSCM5\client;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_261\bin;C:\Program Files\Java\jdk1.8.0_261\jre\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;G:\MATLAB\runtime\win64;G:\MATLAB\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;J:\Git\Git\cmd;D:\Node\;";H:\Java Package\Tomcat\apache-tomcat-10.0.16\lib;H:\Java Package\Tomcat\apache-tomcat-10.0.16\bin;";J:\MySQL\mysql-8.0.27-winx64\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm1;C:\Users\Administrator\.dotnet\tools;D:\IntelliJ IDEA\IDEA\IntelliJ IDEA 2021.1\bin;D:\Anaconda\Anaconda;D:\Anaconda\Anaconda\Scripts;D:\Anaconda\Anaconda\Library\bin;D:\VScode\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;.]上找不到基于APR的Apache Tomcat本机库，该库允许在生产环境中获得最佳性能
+24-Feb-2022 19:42:24.209 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+24-Feb-2022 19:42:24.219 严重 [main] org.apache.catalina.util.LifecycleBase.handleSubClassException 初始化组件[Connector[HTTP/1.1-8080]]失败。
+	org.apache.catalina.LifecycleException: 协议处理程序初始化失败
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1055)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:556)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1042)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:747)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:769)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use: bind
+		at sun.nio.ch.Net.bind0(Native Method)
+		at sun.nio.ch.Net.bind(Net.java:444)
+		at sun.nio.ch.Net.bind(Net.java:436)
+		at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:225)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:244)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:199)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1184)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1197)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:580)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:82)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1052)
+		... 13 more
+24-Feb-2022 19:42:24.221 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[395]毫秒内初始化
+24-Feb-2022 19:42:24.240 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+24-Feb-2022 19:42:24.240 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/10.0.16]
+24-Feb-2022 19:42:24.247 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\docs]
+24-Feb-2022 19:42:24.659 警告 [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom 使用[SHA1PRNG]创建会话ID生成的SecureRandom实例花费了[254]毫秒。
+24-Feb-2022 19:42:24.681 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\docs]的部署已在[434]毫秒内完成
+24-Feb-2022 19:42:24.682 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\examples]
+24-Feb-2022 19:42:24.923 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\examples]的部署已在[241]毫秒内完成
+24-Feb-2022 19:42:24.931 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\host-manager]
+24-Feb-2022 19:42:24.963 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\host-manager]的部署已在[33]毫秒内完成
+24-Feb-2022 19:42:24.973 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\manager]
+24-Feb-2022 19:42:25.000 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\manager]的部署已在[28]毫秒内完成
+24-Feb-2022 19:42:25.001 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\ROOT]
+24-Feb-2022 19:42:25.019 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\ROOT]的部署已在[18]毫秒内完成
+24-Feb-2022 19:42:25.024 信息 [main] org.apache.catalina.startup.Catalina.start [802]毫秒后服务器启动
+24-Feb-2022 19:42:25.028 严重 [main] org.apache.catalina.core.StandardServer.await 无法在地址[localhost]和端口[8005]上创建服务器关闭套接字（基本端口[8005]和偏移量[0]）
+	java.net.BindException: Address already in use: JVM_Bind
+		at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+		at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:102)
+		at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:513)
+		at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:180)
+		at java.net.ServerSocket.bind(ServerSocket.java:375)
+		at java.net.ServerSocket.<init>(ServerSocket.java:237)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:577)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:887)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:833)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+24-Feb-2022 19:42:25.029 信息 [main] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-8080"]
+24-Feb-2022 19:42:25.029 信息 [main] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+24-Feb-2022 19:42:25.041 信息 [main] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+24-Feb-2022 19:42:25.060 信息 [main] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8080"]
+24-Feb-2022 19:43:00.035 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/10.0.16
+24-Feb-2022 19:43:00.038 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Jan 15 2022 13:19:56 UTC
+24-Feb-2022 19:43:00.039 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号:      10.0.16.0
+24-Feb-2022 19:43:00.039 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
+24-Feb-2022 19:43:00.039 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+24-Feb-2022 19:43:00.039 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+24-Feb-2022 19:43:00.039 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Program Files\Java\jdk1.8.0_261\jre
+24-Feb-2022 19:43:00.040 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    1.8.0_261-b12
+24-Feb-2022 19:43:00.040 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+24-Feb-2022 19:43:00.040 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:43:00.040 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:43:00.040 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.config.file=H:\Java Package\Tomcat\apache-tomcat-10.0.16\conf\logging.properties
+24-Feb-2022 19:43:00.040 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+24-Feb-2022 19:43:00.041 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djdk.tls.ephemeralDHKeySize=2048
+24-Feb-2022 19:43:00.041 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+24-Feb-2022 19:43:00.041 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dignore.endorsed.dirs=
+24-Feb-2022 19:43:00.042 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.base=H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:43:00.043 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.home=H:\Java Package\Tomcat\apache-tomcat-10.0.16
+24-Feb-2022 19:43:00.043 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.io.tmpdir=H:\Java Package\Tomcat\apache-tomcat-10.0.16\temp
+24-Feb-2022 19:43:00.054 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 在java.library.path:[C:\Program Files\Java\jdk1.8.0_261\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\Anaconda\Anaconda\condabin;C:\Program Files\PlasticSCM5\server;C:\Program Files\PlasticSCM5\client;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_261\bin;C:\Program Files\Java\jdk1.8.0_261\jre\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;G:\MATLAB\runtime\win64;G:\MATLAB\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;J:\Git\Git\cmd;D:\Node\;";H:\Java Package\Tomcat\apache-tomcat-10.0.16\lib;H:\Java Package\Tomcat\apache-tomcat-10.0.16\bin;";J:\MySQL\mysql-8.0.27-winx64\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm1;C:\Users\Administrator\.dotnet\tools;D:\IntelliJ IDEA\IDEA\IntelliJ IDEA 2021.1\bin;D:\Anaconda\Anaconda;D:\Anaconda\Anaconda\Scripts;D:\Anaconda\Anaconda\Library\bin;D:\VScode\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;.]上找不到基于APR的Apache Tomcat本机库，该库允许在生产环境中获得最佳性能
+24-Feb-2022 19:43:00.292 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+24-Feb-2022 19:43:00.312 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[410]毫秒内初始化
+24-Feb-2022 19:43:00.363 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+24-Feb-2022 19:43:00.363 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/10.0.16]
+24-Feb-2022 19:43:00.374 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\docs]
+24-Feb-2022 19:43:00.777 警告 [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom 使用[SHA1PRNG]创建会话ID生成的SecureRandom实例花费了[259]毫秒。
+24-Feb-2022 19:43:00.798 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\docs]的部署已在[423]毫秒内完成
+24-Feb-2022 19:43:00.798 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\examples]
+24-Feb-2022 19:43:01.025 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\examples]的部署已在[227]毫秒内完成
+24-Feb-2022 19:43:01.035 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\host-manager]
+24-Feb-2022 19:43:01.060 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\host-manager]的部署已在[25]毫秒内完成
+24-Feb-2022 19:43:01.068 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\manager]
+24-Feb-2022 19:43:01.086 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\manager]的部署已在[18]毫秒内完成
+24-Feb-2022 19:43:01.087 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\ROOT]
+24-Feb-2022 19:43:01.105 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[H:\Java Package\Tomcat\apache-tomcat-10.0.16\webapps\ROOT]的部署已在[18]毫秒内完成
+24-Feb-2022 19:43:01.108 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8080"]
+24-Feb-2022 19:43:01.120 信息 [main] org.apache.catalina.startup.Catalina.start [807]毫秒后服务器启动

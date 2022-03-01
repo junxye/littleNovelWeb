@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 加载外部的配置文件 -->
+    <properties resource="db.properties"/>
+
+
+    <!-- 设置重要参数  -->
+    <settings>
+        <!-- 开启驼峰命名规则 -->
+       <!--  <setting name="mapUnderscoreToCamelCase" value="true"/> -->
+        <!-- 配置log4j  -->
+        <setting name="logImpl" value="LOG4J"/>
+        <!-- 开启懒加载 -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!-- 开启属性懒加载 -->
+        <setting name="aggressiveLazyLoading" value="false"/>
+
+        <!-- 开启二级缓存 -->
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/novelweb?serverTimezone=GMT"/>
+                <property name="username" value="root"/>
+                <property name="password" value="SQLjx1413"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+</configuration>
