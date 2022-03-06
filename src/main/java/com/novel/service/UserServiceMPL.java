@@ -21,8 +21,6 @@ public class UserServiceMPL implements UserServiceDAO {
         //UserMPL userMPL = session.getMapper(UserMPL.class);
         UserDAO userMPL = new UserMPL();
         User user = userMPL.queryUser(_account);
-        //时间转化
-        System.out.println(user);
         if(user!=null) {
             user.setAddTime(TimeUtils.parseTime(user.getAddTime()));
         }
@@ -83,14 +81,13 @@ public class UserServiceMPL implements UserServiceDAO {
         //SqlSession session = SessionUtils.getSession();
         //UserMPL userMPL = session.getMapper(UserMPL.class);
         UserDAO userMPL = new UserMPL();
-        int totalData = userMPL.queryUserNumber(paramMap);//总数据
+        int totalData = userMPL.queryUserNumber(paramMap);
         Page<User> pages = PageUtils.getPages(currentPageNumber, pageSize, totalData);
         if(totalData==0) {
             SessionUtils.closeSession();
             return pages;
         }
         List<User> pageLists = userMPL.queryUserByPage(pages.getCurrentPage(), pageSize, paramMap);
-        //处理时间
         for (User user : pageLists) {
             if(user!=null) {
                 user.setAddTime(TimeUtils.parseTime(user.getAddTime()));

@@ -67,6 +67,7 @@ public class ShelfServiceMPL implements ShelfServiceDAO {
             SessionUtils.closeSession();
             return pages;
         }
+        //System.out.println("pageLists : "+_account+" "+pages.getCurrentPage()+" "+pageSize+" "+paramMap.toString());
         List<NovelShelf> pageLists = shelfDAO.queryNovelInShelf(_account, pages.getCurrentPage(), pageSize, paramMap);
         for (NovelShelf novelShelf : pageLists){
             if (novelShelf != null)

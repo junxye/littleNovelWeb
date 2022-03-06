@@ -30,12 +30,6 @@
 </head>
 <body>
 <div class="slideshow">
-    <!--
-    <img src="${pageContext.request.contextPath}/all/bg/1.jpg" alt="1" class="slideshow-image">
-    <img src="${pageContext.request.contextPath}/all/bg/2.jpg" alt="2" class="slideshow-image">
-    <img src="${pageContext.request.contextPath}/all/bg/3.jpg" alt="3" class="slideshow-image">
-    <img src="${pageContext.request.contextPath}/all/bg/4.jpg" alt="4" class="slideshow-image">
-    -->
     <div id="login">
         <span style="font-size: 60px; color: #FF8150;">登 录</span>
         <br>
@@ -44,11 +38,6 @@
             <br><br>
             <input type="password" id="password_number" placeholder="请输入密码" maxlength="16" style="font-size: 18px;" name="passWord" required>
             <br>
-            <!--
-            <input type="text" id="code" class="id_number" placeholder="请输入验证码" maxlength="6" style="font-size: 18px;" name="vcode" required>
-             这是一个图片链接，点击图片后执行refreshCode()函数更换图片 --><!--
-            <a href="javascript:refreshCode();"><img src="${pageContext.request.contextPath}/VerificationCodeServlet" title="看不清点击刷新" id="vcode_img"/></a>
-            -->
             <div>
                 <input type="submit" id="login_submit" value="登录">
             </div>

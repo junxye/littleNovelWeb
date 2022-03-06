@@ -3,6 +3,7 @@
   User: Administrator
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
@@ -54,16 +55,18 @@
                         <li><a href="${pageContext.request.contextPath}/NovelRank">排行</a></li>
                         <li><a href="${pageContext.request.contextPath}/QueryNovelShelfByPage">书架</a></li>
                         <li><a href="${pageContext.request.contextPath}/QueryUser">个人信息</a></li>
+                        <li>
                         <c:if test="${user.getAccount() == 'admin'}">
                             <li>
                                 <a href="${pageContext.request.contextPath}/QueryUserByPage">管理员界面</a>
                             </li>
                         </c:if>
+                        </li>
                     </ul>
                     <!-- 搜索框 -->
                     <form class="navbar-form navbar-right" action="${pageContext.request.contextPath}/QueryNovelByPage" method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="关键词、书名、作者名" name="_param" value="${f_param }">
+                            <input type="text" class="form-control" placeholder="关键词、书名、作者名" name="_param" value="${_param }">
                         </div>
                         <button type="submit" class="btn btn-default">搜索</button>
                     </form>
@@ -76,7 +79,7 @@
     <div style="margin-left: 37px;">
         <!-- Single button -->
         <div class="btn-group">
-            <c:if test="${novelParamMap._category==null||novelParamMap._category==''}">
+            <c:if test="${novelParamMap.category==null||novelParamMap.category==''}">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#0EBB9A">
                     全部<span class="caret"></span>
                 </button>
@@ -89,7 +92,7 @@
                     <li><a href="${pageContext.request.contextPath}/QueryNovelByPage?_category=古言&addTime=${addTime }&_param=${_param }&totalWords=${totalWords }">古言</a></li>
                 </ul>
             </c:if>
-            <c:if test="${novelParamMap._category=='玄幻'}">
+            <c:if test="${novelParamMap.category=='玄幻'}">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#0EBB9A">
                     玄幻<span class="caret"></span>
                 </button>
@@ -102,7 +105,7 @@
                     <li><a href="${pageContext.request.contextPath}/QueryNovelByPage?_category=古言&addTime=${addTime }&_param=${_param }&totalWords=${totalWords }">古言</a></li>
                 </ul>
             </c:if>
-            <c:if test="${novelParamMap._category=='科幻'}">
+            <c:if test="${novelParamMap.category=='科幻'}">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#0EBB9A">
                     科幻<span class="caret"></span>
                 </button>
@@ -115,7 +118,7 @@
                     <li><a href="${pageContext.request.contextPath}/QueryNovelByPage?_category=古言&addTime=${addTime }&_param=${_param }&totalWords=${totalWords }">古言</a></li>
                 </ul>
             </c:if>
-            <c:if test="${novelParamMap._category=='都市'}">
+            <c:if test="${novelParamMap.category=='都市'}">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#0EBB9A">
                     都市<span class="caret"></span>
                 </button>
@@ -128,7 +131,7 @@
                     <li><a href="${pageContext.request.contextPath}/QueryNovelByPage?_category=古言&addTime=${addTime }&_param=${_param }&totalWords=${totalWords }">古言</a></li>
                 </ul>
             </c:if>
-            <c:if test="${novelParamMap._category=='仙侠'}">
+            <c:if test="${novelParamMap.category=='仙侠'}">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#0EBB9A">
                     仙侠<span class="caret"></span>
                 </button>
@@ -141,7 +144,7 @@
                     <li><a href="${pageContext.request.contextPath}/QueryNovelByPage?_category=古言&addTime=${addTime }&_param=${_param }&totalWords=${totalWords }">古言</a></li>
                 </ul>
             </c:if>
-            <c:if test="${novelParamMap._category=='游戏'}">
+            <c:if test="${novelParamMap.category=='游戏'}">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#0EBB9A">
                     游戏<span class="caret"></span>
                 </button>
@@ -154,7 +157,7 @@
                     <li><a href="${pageContext.request.contextPath}/QueryNovelByPage?_category=古言&addTime=${addTime }&_param=${_param }&totalWords=${totalWords }">古言</a></li>
                 </ul>
             </c:if>
-            <c:if test="${novelParamMap._category=='古言'}">
+            <c:if test="${novelParamMap.category=='古言'}">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#0EBB9A">
                     古言<span class="caret"></span>
                 </button>
@@ -173,7 +176,7 @@
             </c:if>
             <!-- 没使用了字数排序 -->
             <c:if test="${totalWords ==null || totalWords == ''}">
-                <a class="btn btn-default" href="${pageContext.request.contextPath}/QueryNovelByPage?_category=${novelParamMap._category }&_param=${_param }&totalWords=totalWords&addTime=${addTime }" role="button" style="background-color: #0EBB9A;margin-left: 10px;border-radius: 10%;">字数</a>
+                <a class="btn btn-default" href="${pageContext.request.contextPath}/QueryNovelByPage?_category=${novelParamMap.category }&_param=${_param }&totalWords=totalWords&addTime=${addTime }" role="button" style="background-color: #0EBB9A;margin-left: 10px;border-radius: 10%;">字数</a>
             </c:if>
             <!-- 使用了时间排序 -->
             <c:if test="${addTime != null && addTime != ''}">
@@ -181,23 +184,27 @@
             </c:if>
             <!-- 没使用了时间排序 -->
             <c:if test="${addTime == null || addTime == ''}">
-                <a class="btn btn-default" href="${pageContext.request.contextPath}/QueryNovelByPage?_category=${novelParamMap._category }&addTime=addTime&_param=${_param }&totalWords=${totalWords }" role="button" style="background-color: #0EBB9A;;margin-left: 10px;border-radius: 10%;">时间</a>
+                <a class="btn btn-default" href="${pageContext.request.contextPath}/QueryNovelByPage?_category=${novelParamMap.category }&addTime=addTime&_param=${_param }&totalWords=${totalWords }" role="button" style="background-color: #0EBB9A;;margin-left: 10px;border-radius: 10%;">时间</a>
             </c:if>
         </div>
     </div>
 
     <!-- 书籍信息 -->
     <c:forEach items="${novelPages.getPageLists() }" var="l">
+        <!--
+        <a class="btn" href="javascript:void(0);" role="button"><span style="font-weight: 700;font-size: 20px;">${l.id }</span></a>
+        <a class="btn" href="javascript:void(0);" role="button"><span style="font-weight: 700;font-size: 20px;">${l.num}</span></a>
+        -->
         <div class="row thumbnail">
             <div class="col-md-2">
-                <div><a href="${pageContext.request.contextPath}/QueryNovel?__number=${l.__number } "><img src="${pageContext.request.contextPath}/all/${l.image }" alt="书籍" class="book_img" style="height: 133px;"></a></div>
+                <div><a href="${pageContext.request.contextPath}/QueryNovel?__number=${l.id } "><img src="${pageContext.request.contextPath}/img/${l.image }" alt="书籍" class="book_img" style="height: 133px;"></a></div>
             </div>
             <div class="col-md-10">
-                <a href="${pageContext.request.contextPath}/QueryNovel?__number=${l.__number }"><span style="font-weight: 700;font-size: 27px;">${l._name }</span></a><br>
-                <a href="${pageContext.request.contextPath}/QueryNovel?__number=${l.__number }"><span style="font-weight: 700;font-size: 18px;">${l._author }</span></a><br>
-                <div style="height: 45px;"><a href="${pageContext.request.contextPath}/QueryNovel?__number=${l.__number }"><span style="color: black;">${l._introduction }</span></a></div>
+                <a href="${pageContext.request.contextPath}/QueryNovel?__number=${l.id }"><span style="font-weight: 700;font-size: 27px;">${l.novelName }</span></a><br>
+                <a href="${pageContext.request.contextPath}/QueryNovel?__number=${l.id }"><span style="font-weight: 700;font-size: 18px;">${l.author }</span></a><br>
+                <div style="height: 45px;"><a href="${pageContext.request.contextPath}/QueryNovel?__number=${l.id }"><span style="color: black;">${l.introduction }</span></a></div>
                 <span style="border: 1px solid red;color: red;font-size: 16px;">${l.category }</span>&nbsp;&nbsp;<span style="border: 1px solid blue;color: blue;font-size: 16px;">${l.totalWords }万</span>
-                &nbsp;<span style="border: 1px solid green;color: green;font-size: 16px;">阅读量:${l.readTimes }</span>
+                &nbsp;<span style="border: 1px solid green;color: green;font-size: 16px;">阅读量:${l.readTime }</span>
                 &nbsp;<span style="border: 1px solid orange;color: orange;font-size: 16px;">收藏量:${l.collectionTimes }</span>
             </div>
         </div>
@@ -214,7 +221,7 @@
                     <c:if test="${novelPages.getCurrentPageNumber() != 1 }">
                 <li>
                     </c:if>
-                    <a href="${pageContext.request.contextPath }/QueryNovelByPage?_currentPageNumber=${novelPages.getCurrentPageNumber() -1}&_category=${novelParamMap._category }&addTime=${addTime }&_param=${_param }&totalWords=${totalWords }" aria-label="Previous">
+                    <a href="${pageContext.request.contextPath }/QueryNovelByPage?currentPageNumber=${novelPages.getCurrentPageNumber() -1}&_category=${novelParamMap.category }&addTime=${addTime }&_param=${_param }&totalWords=${totalWords }" aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
                     </a>
                 </li>
@@ -225,7 +232,7 @@
                     <c:if test="${novelPages.getCurrentPageNumber() != i }">
                         <li>
                     </c:if>
-                    <a href="${pageContext.request.contextPath }/QueryNovelByPage?_currentPageNumber=${i }&_category=${novelParamMap._category }&addTime=${addTime }&_param=${_param }&totalWords=${totalWords }">${i }</a></li>
+                    <a href="${pageContext.request.contextPath }/QueryNovelByPage?currentPageNumber=${i }&_category=${novelParamMap.category }&addTime=${addTime }&_param=${_param }&totalWords=${totalWords }">${i }</a></li>
                 </c:forEach>
                 <c:if test="${novelPages.getCurrentPageNumber() == novelPages.getTotalPage() }">
                 <li class="disabled">
@@ -233,7 +240,7 @@
                     <c:if test="${novelPages.getCurrentPageNumber() != novelPages.getTotalPage() }">
                 <li>
                     </c:if>
-                    <a href="${pageContext.request.contextPath }/QueryNovelByPage?_currentPageNumber=${novelPages.getCurrentPageNumber() +1 }&_category=${novelParamMap._category }&addTime=${addTime }&_param=${_param }&totalWords=${totalWords }" aria-label="Next">
+                    <a href="${pageContext.request.contextPath }/QueryNovelByPage?currentPageNumber=${novelPages.getCurrentPageNumber() +1 }&_category=${novelParamMap.category }&addTime=${addTime }&_param=${_param }&totalWords=${totalWords }" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                     </a>
                 </li>

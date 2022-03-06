@@ -33,6 +33,7 @@ public class queryUserByPage extends HttpServlet {
         Map<String, String[]> paramMap = request.getParameterMap();
         UserServiceDAO us = new UserServiceMPL();
         Page<User> userPages = us.queryByPage(currentPageNumber, 10, paramMap);
+        System.out.println(userPages.getPageLists());
         request.setAttribute("userPages", userPages);//查询出来的一页用户数据
         request.setAttribute("userParamMap", paramMap);//用于页面回写
         request.getRequestDispatcher("jsp/user/admin.jsp").forward(request, response);

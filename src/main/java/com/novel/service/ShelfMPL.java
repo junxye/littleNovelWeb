@@ -1,14 +1,19 @@
 package com.novel.service;
 
+import com.novel.DAO.NovelDAO;
 import com.novel.DAO.NovelShelfDAO;
+import com.novel.entity.Novel;
 import com.novel.entity.NovelShelf;
 import com.novel.util.JDBCUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 import org.apache.log4j.PropertyConfigurator;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -23,9 +28,9 @@ public class ShelfMPL implements NovelShelfDAO {
         long num = 0l;
         try {
             if (_number != 0)
-                num = (long) runner.query("SELECT COUNT(*) FROM novelShelf WHERE account=?", new ScalarHandler(), _account);
-            else
                 num = (long) runner.query("SELECT COUNT(*) FROM novelShelf WHERE account=? AND novelNumber=?", new ScalarHandler(), _account, _number);
+            else
+                num = (long) runner.query("SELECT COUNT(*) FROM novelShelf WHERE account=?", new ScalarHandler(), _account);
 
             if (num > 0) return true;
             else return false;
@@ -42,7 +47,9 @@ public class ShelfMPL implements NovelShelfDAO {
         //PropertyConfigurator.configure("log4j.properties");
         QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
         try {
-            runner.update("INSERT INTO novelshelf (`novelNumber`, `account`) VALUE (?,?)", _number, _account);
+            NovelDAO novelDAO = new NovelMPL();
+            Novel novel = novelDAO.queryNovel(_number);
+            runner.update("INSERT INTO novelshelf (`novelNumber`, `account`,`novelName`) VALUE (?,?,?)", _number, _account,novel.getNovelName());
             log.info("User "+_account+" add novel success. ");
             return true;
         } catch (SQLException e) {
@@ -73,6 +80,14 @@ public class ShelfMPL implements NovelShelfDAO {
         Logger log = Logger.getLogger(String.valueOf(ShelfMPL.class));
         //PropertyConfigurator.configure("log4j.properties");
         QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
+        String sql = "SELECT COUNT(*) FROM novelshelf WHERE account="+ _account;
+        /*
+        if (paramMap.get("_name").toString() != null || Arrays.toString(paramMap.get("_name")) != ""){
+            sql += " AND novelName = "+Arrays.toString(paramMap.get("_name"));
+        }*/
+        for (String key : paramMap.keySet()) {
+            System.out.println("QueryNovelNumberInShelf: key= "+ key + " and value= " + paramMap.get("_name").toString());
+        }
         try {
             Long l = (Long) runner.query("SELECT COUNT(*) FROM novelshelf WHERE account=?", new ScalarHandler(), _account);
             return Integer.parseInt(String.valueOf(l));
@@ -88,12 +103,27 @@ public class ShelfMPL implements NovelShelfDAO {
         Logger log = Logger.getLogger(String.valueOf(ShelfMPL.class));
         //PropertyConfigurator.configure("log4j.properties");
         QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
-        String sql = "SELECT * FROM novelshelf WHERE account="+ _account +" ORDER BY ";
+        String sql = "SELECT * FROM novelshelf WHERE account= '" + _account + "' ORDER BY ";
         if (paramMap.get("novelNumber") != null) sql += "novelNumber";
         else sql += "time";
-        sql += " LIMIT "+ pageSize + "OFFSET"+ currentPage;
+        //sql += " LIMIT "+ pageSize + "OFFSET"+ currentPage;
+        for (String key : paramMap.keySet()) {
+            System.out.println("QueryNovelInShelf: key= "+ key + " and value= " + Arrays.toString(paramMap.get(key)));
+        }
         try {
-            return (List<NovelShelf>) runner.query(sql, new BeanHandler<List>(List.class));
+            /*
+            List<NovelShelf> list = new ArrayList<NovelShelf>();
+            for (int i = currentPage*pageSize; i<=currentPage*pageSize; i++){
+                String s = sql + " LIMIT " + 1 + " OFFSET " + i;
+                list.add(runner.query(s, new BeanHandler<NovelShelf>(NovelShelf.class)));
+            }
+            return list;
+             */
+            currentPage++;
+            List<NovelShelf> list = runner.query(sql,new BeanListHandler<NovelShelf>(NovelShelf.class));
+            if (currentPage * pageSize > list.size())
+                return list.subList((currentPage-1) * pageSize, list.size());
+            return list.subList((currentPage-1) * pageSize, currentPage * pageSize);
         } catch (SQLException e) {
             e.printStackTrace();
             log.info("User "+_account+" shelf search failure. "+e.getMessage());

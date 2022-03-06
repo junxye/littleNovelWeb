@@ -39,6 +39,7 @@ public class novelRank extends HttpServlet {
         Page<Novel> pages1 = ns.queryNovelByPage(1, 10, null, conditionMap1);
         Page<Novel> pages2 = ns.queryNovelByPage(1, 10, null, conditionMap2);
         Page<Novel> pages3 = ns.queryNovelByPage(1, 10, null, conditionMap3);
+        System.out.println(ns.queryNovelByPage(1, 10, null, conditionMap1));
         List<Novel> timeRank= pages1.getPageLists();
         List<Novel> readTimesRank = pages2.getPageLists();
         List<Novel> collectionTimesRank = pages3.getPageLists();

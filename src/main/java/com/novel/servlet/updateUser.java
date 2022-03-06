@@ -31,7 +31,7 @@ public class updateUser extends HttpServlet {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html; charset=UTF-8");
         Logger log = Logger.getLogger(String.valueOf(updateUser.class));
-        PropertyConfigurator.configure("log4j.properties");
+        //PropertyConfigurator.configure("log4j.properties");
         Map<String, String[]> parameterMap = request.getParameterMap();
         User user = new User();
         try {
@@ -42,7 +42,7 @@ public class updateUser extends HttpServlet {
             }else {
                 System.out.println("个人信息更新失败...");
             }
-            response.sendRedirect("queryUser");
+            response.sendRedirect("QueryUser");
         } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
             log.info("User update information error. "+e.getMessage());

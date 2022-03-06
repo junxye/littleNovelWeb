@@ -33,6 +33,7 @@ public class queryNovel extends HttpServlet {
         NovelServiceDAO ns = new NovelServiceMPL();
         Novel novel = ns.queryNovel(_number);
         request.setAttribute("novel", novel);
+        //System.out.println("Novel id: "+__number+" "+novel);
 /*
         //接收评论所需参数
         String _currentpageNum = request.getParameter("currentpageNum");
@@ -44,9 +45,9 @@ public class queryNovel extends HttpServlet {
         Page<Comments> commentsparameterMap = cs.queryComments(bnum, currentpageNum, 10);
         request.setAttribute("commentsparameterMap", commentsparameterMap);
 */
-        //判断书架中是否有该书
         ShelfServiceDAO sd = new ShelfServiceMPL();
         User user = (User)request.getSession().getAttribute("user");
+        //System.out.println("QueryNovel : "+ user.getAccount()+" "+_number+" "+sd.queryShelf(user.getAccount(), _number));
         if(sd.queryShelf(user.getAccount(), _number)) {
             request.setAttribute("IsInNovelShelf", "IsInNovelShelf");
         }

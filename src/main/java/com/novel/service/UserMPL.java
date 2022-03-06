@@ -1,14 +1,17 @@
 package com.novel.service;
 
 import com.novel.DAO.UserDAO;
+import com.novel.entity.Novel;
 import com.novel.entity.User;
 import com.novel.util.JDBCUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 import org.apache.log4j.PropertyConfigurator;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -49,7 +52,7 @@ public class UserMPL implements UserDAO {
             if (sql.charAt(sql.length()-2) == '"') sql += ", ";
             sql += "`introduce`=\""+user.getIntroduce()+"\" ";
         }
-        sql += "WHERE id ="+user.getId();
+        sql += " WHERE account = \""+user.getAccount() + "\"";
         try {
             runner.update(sql);
             log.info("User "+ user.getAccount()+" update success.");
@@ -119,9 +122,14 @@ public class UserMPL implements UserDAO {
             if (paramMap.get("account") != null) sql += "account";
             else sql += "id";
         }
-        sql += " DESC LIMIT "+pageSize + " OFFSET " + currentPage;
+        //sql += " DESC LIMIT "+pageSize + " OFFSET " + currentPage;
         try {
-            return (List<User>) runner.query(sql, new BeanHandler<List>(List.class));
+            currentPage++;
+            List<User> list = runner.query(sql,new BeanListHandler<User>(User.class));
+            if (currentPage * pageSize > list.size())
+                return list.subList((currentPage-1) * pageSize, list.size());
+            System.out.println("queryUserByPage : "+(currentPage-1) * pageSize+" "+ currentPage * pageSize);
+            return list.subList((currentPage-1) * pageSize, currentPage * pageSize);
         } catch (SQLException e) {
             e.printStackTrace();
             log.info("Get user message error. "+e.getMessage());

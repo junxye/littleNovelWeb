@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
 <log4j:configuration xmlns="http://jakarta.apache.org/log4j/"
-                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:log4j="" xsi:schemaLocation="
- ">
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="" xmlns:log4j="" >
 
     <!-- ========================== 自定义输出格式说明================================ -->
     <!-- %p 输出优先级，即DEBUG，INFO，WARN，ERROR，FATAL -->

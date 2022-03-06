@@ -3,6 +3,7 @@
   User: Administrator
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
@@ -102,8 +103,8 @@
             <a href="${pageContext.request.contextPath }/QueryNovel?__number=${_number} "><i class="iconfont iconfont_1">&#xe612;<br><span class="s1">返回</span></i></a>
         </c:if>
     </div>
-    <div class="left_fw_01"><a href="#"><i class="iconfont iconfont_1">&#xe609;<br><span
-            class="s1">设置</span></i></a></div>
+    <div class="left_fw_01"><a href="${pageContext.request.contextPath }/txt/元尊_第一章.txt" download="元尊_第一章.txt"><i class="iconfont iconfont_1">&#xe609;<br><span
+            class="s1">下载</span></i></a></div>
     <div class="left_fw_01">
         <!-- 已在书架 -->
         <c:if test="${IsInNovelshelf !=null}">
@@ -157,13 +158,12 @@
             </div>
         </div>
     </div>
-
-    <c:if test="${novelContent.getChapterNumber() >=novelContentTotal || novelContent==null}">
+    <c:if test="${novelContent.getChapterNumber() >=contentTotal || novelContent==null}">
         <a class="btn btn-default disabled" href="javascript:void(0);" role="button" style="width: 255px;height: 50px;margin-left: 9px;">
             <span style="font-size: 20px;line-height: 38px;">下一章</span>
         </a>
     </c:if>
-    <c:if test="${novelContent.getChapterNumber() <novelContentTotal && novelContent!=null}">
+    <c:if test="${novelContent.getChapterNumber() <contentTotal && novelContent!=null}">
         <a class="btn btn-default" href="${pageContext.request.contextPath }/NovelContentRead?__number=${novelContent.getNovelNumber()}&_chapterNumber=${novelContent.getChapterNumber()+1 } " role="button" style="width: 255px;height: 50px;margin-left: 9px;">
             <span style="font-size: 20px;line-height: 38px;">下一章</span>
         </a>

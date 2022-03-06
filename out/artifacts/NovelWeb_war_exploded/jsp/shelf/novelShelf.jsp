@@ -3,6 +3,7 @@
   User: Administrator
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
@@ -27,7 +28,7 @@
         th,td{text-align: center;font-size: 17px;}
         .book_img{width: 100px;height: 130px;}
         #center{flex: 1;}
-        #bg3{background: url('${pageContext.request.contextPath }/all/book/bg4.jpg'); height: 120px;}
+        #bg3{ height: 100px;}
     </style>
     <script>
         $(function() {
@@ -98,9 +99,9 @@
     </div>
 </header>
 <div class="container" style="background-color: #ffffff;" id="center">
-    <div class="row" id="bg3">
+    <div >
         <div style="float: left;font-size: 16px;">
-            <form class="form-inline" style="margin-top: 85px;font-weight: 700;" action="${pageContext.request.contextPath }/QueryNovelShelfByPage" method="post">
+            <form class="form-inline" style="margin-top: 15px;font-weight: 700;margin-bottom: 5px;" action="${pageContext.request.contextPath }/QueryNovelShelfByPage" method="post">
                 <div class="form-group">
                     <label for="exampleInputName2" style="color: red;">作品名</label>
                     <input type="text" class="form-control" id="exampleInputName2" placeholder="请输入作品名" name = "_name" value="${novelShelfParamMap._name[0] }"
@@ -114,7 +115,7 @@
                 <button type="submit" class="btn btn-default" style="background-color: turquoise;">查询</button>
             </form>
         </div>
-        <div style="float: right;margin-right: 60px;margin-top: 85px;"><a href="javascript:void(0);" class="btn btn-primary" role="button" id="deleteSelect" >移出所选</a></div>
+        <div style="float: right;margin-right: 60px;margin-top: 15px;margin-bottom: 5px;"><a href="javascript:void(0);" class="btn btn-primary" role="button" id="deleteSelect" >移出所选</a></div>
     </div>
     <div class="row mag_top" style="text-align: center;">
         <form action="${pageContext.request.contextPath}/DeleteNovelFromShelf" method="post" id="deleteForm">
@@ -127,7 +128,9 @@
                     <th>作者</th>
                     <th>加入时间</th>
                     <th>操作</th>
-                </tr>
+                </tr><tr>
+                <c:if test="${novelShelfPage.getTotalData() == 0}">无</c:if></tr>
+                <c:if test="${novelShelfPage.getTotalData() != 0}">
                 <c:forEach items="${novelShelfPage.getPageLists()}" var="l" varStatus="s">
                     <tr>
                         <td><input type="checkbox" name="checkItem" value="${l.getNovelNumber() }" class="checkItem" style="width: 25px;height: 25px;"></td>
@@ -135,10 +138,11 @@
                         <td>${l.getNovel().getCategory() }</td>
                         <td>${l.getNovel().getNovelName() }</td>
                         <td>${l.getNovel().getAuthor() }</td>
-                        <td>${l.getAddTime() }</td>
-                        <td><a class="btn btn-default" href="${pageContext.request.contextPath}/DeleteNovelFromShelf? _novelNumber=${l.getNovelNumber() }" role="button">移出书架</a></td>
+                        <td>${l.getTime() }</td>
+                        <td><a class="btn btn-default" href="${pageContext.request.contextPath}/DeleteNovelFromShelf? __number=${l.getNovelNumber() }" role="button">移出书架</a></td>
                     </tr>
                 </c:forEach>
+                </c:if>
             </table>
         </form>
     </div>
@@ -148,10 +152,10 @@
         <!-- 分页 -->
         <nav aria-label="Page navigation">
             <ul class="pagination">
-                <c:if test="${novelShelfPage.getCurrentpageNum()<=1}">
+                <c:if test="${novelShelfPage.getCurrentPageNumber()<=1}">
                 <li class="disabled">
                     </c:if>
-                    <c:if test="${novelShelfPage.getCurrentpageNum()>1}">
+                    <c:if test="${novelShelfPage.getCurrentPageNumber()>1}">
                 <li>
                     </c:if>
                     <a href="${pageContext.request.contextPath}/QueryNovelShelfByPage?_currentPageNumber=${novelShelfPage.getCurrentPageNumber()-1 }" aria-label="Previous">

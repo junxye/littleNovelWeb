@@ -4,6 +4,7 @@ import com.novel.DAO.NovelDAO;
 import com.novel.entity.Novel;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -12,6 +13,7 @@ import java.util.logging.Logger;
 import com.novel.util.JDBCUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ColumnListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 import org.apache.log4j.PropertyConfigurator;
@@ -33,7 +35,7 @@ public class NovelMPL implements NovelDAO {
 
     Novel findNovel(int number) throws SQLException {
         QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
-        System.out.println(runner.query("SELECT * FROM novel WHERE id =?", new ScalarHandler(), number));
+        //System.out.println(runner.query("SELECT * FROM novel WHERE id =?", new ScalarHandler(), number));
         return runner.query("SELECT * FROM novel WHERE id =?", new BeanHandler<Novel>(Novel.class), number);
     }
 
@@ -97,8 +99,15 @@ public class NovelMPL implements NovelDAO {
         Logger log = Logger.getLogger(String.valueOf(NovelMPL.class));
         //PropertyConfigurator.configure("log4j.properties");
         QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
+        String sql = "SELECT COUNT(*) FROM novel";
+        sql += queryCategory(paramMap);
+        //System.out.println(sql);
         try {
-            Long l = (long) runner.query("SELECT COUNT(*) FROM novel", new ScalarHandler());
+            Long l = (long) runner.query(sql, new ScalarHandler());
+            if (paramMap != null && paramMap.get("param") != null && !paramMap.get("param").equals("")){
+                String s = "SELECT COUNT(*) FROM novel WHERE author LIKE '%"+paramMap.get("param")+"%' AND novelName NOT LIKE '%"+paramMap.get("param")+"%'";
+                l += (long) runner.query(s, new ScalarHandler());
+            }
             return Integer.parseInt(String.valueOf(l));
         } catch (SQLException e) {
             e.printStackTrace();
@@ -112,7 +121,9 @@ public class NovelMPL implements NovelDAO {
         Logger log = Logger.getLogger(String.valueOf(NovelMPL.class));
         //PropertyConfigurator.configure("log4j.properties");
         QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
-        String sql = "select * from novel ORDER BY ";
+        String sql = "select * from novel";
+        sql += queryCategory(paramMap);
+        sql += " ORDER BY ";
         if (conditionMap != null){
             if (conditionMap.get("addTime") !=null && !conditionMap.get("addTime").equals("")) sql += "addTime ";
             else if (conditionMap.get("totalWords") !=null && !conditionMap.get("totalWords").equals("")) sql += "totalWords ";
@@ -120,19 +131,40 @@ public class NovelMPL implements NovelDAO {
             else if (conditionMap.get("collectionTimes") !=null && !conditionMap.get("collectionTimes").equals("")) sql += "collectionTimes" ;
             else sql += "collectionTimes ";
         }
-        //sql += "DESC LIMIT " + pageSize + " OFFSET " + currentPage;
-        //System.out.println(sql);
+
         try {
-            List<Novel> list = new LinkedList<>();
-            for (int i = (currentPage-1)*pageSize; i<currentPage*pageSize; i++){
-                String s = sql + "DESC LIMIT " + 1 + " OFFSET " + i;
-                list.add(runner.query(s, new BeanHandler<Novel>(Novel.class)));
+            //sql += " DESC LIMIT " + pageSize + " OFFSET " + (currentPage-1);
+            sql += " DESC ";
+            List<Novel> list = runner.query(sql,new BeanListHandler<Novel>(Novel.class));
+            if (paramMap != null && paramMap.get("param") != null && !paramMap.get("param").equals("")){
+                String s = "SELECT * FROM novel WHERE author LIKE '%"+paramMap.get("param")+"%' AND novelName NOT LIKE '%"+paramMap.get("param")+"%'";
+                list.addAll(runner.query(s, new BeanListHandler<Novel>(Novel.class)));
             }
-            return list;
+            if (currentPage * pageSize > list.size())
+                return list.subList((currentPage-1) * pageSize, list.size());
+            return list.subList((currentPage-1) * pageSize, currentPage * pageSize);
         } catch (SQLException e) {
             e.printStackTrace();
             log.info("Get sort error. "+ e.getMessage());
         }
         return null;
+    }
+
+    private String queryCategory(Map<String, String> paramMap){
+        String sql = "";
+        if (paramMap != null){
+            if (paramMap.get("category") != null && !paramMap.get("category").equals("")) {
+                if (paramMap.get("category").equals("玄幻")) sql += " WHERE category = \"玄幻\"";
+                else if (paramMap.get("category").equals("科幻")) sql += " WHERE category = \"科幻\"";
+                else if (paramMap.get("category").equals("仙侠")) sql += " WHERE category = \"仙侠\"";
+                else if (paramMap.get("category").equals("都市")) sql += " WHERE category = \"都市\"";
+                else if (paramMap.get("category").equals("游戏")) sql += " WHERE category = \"游戏\"";
+                else if (paramMap.get("category").equals("古言")) sql += " WHERE category = \"古言\"";
+            }
+            else if (paramMap.get("param") != null && !paramMap.get("param").equals("")){
+                sql += " WHERE novelName like '%"+paramMap.get("param")+"%'";
+            }
+        }
+        return sql;
     }
 }

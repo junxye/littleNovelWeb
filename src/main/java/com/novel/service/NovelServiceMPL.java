@@ -19,7 +19,7 @@ public class NovelServiceMPL implements NovelServiceDAO {
         //SqlSession session = SessionUtils.getSession();
         //NovelMPL novelDAO = session.getMapper(NovelMPL.class);
         NovelDAO novelDAO = new NovelMPL();
-        novelDAO.updateNovel(novel);
+        novelDAO.updateNovel(novelDAO.queryNovel(novel.getNum()));
         //session.commit();
         SessionUtils.closeSession();
     }
@@ -47,16 +47,16 @@ public class NovelServiceMPL implements NovelServiceDAO {
             SessionUtils.closeSession();
             return pages;
         }
-        System.out.println("pages: "+pages.getCurrentPageNumber());
+        //System.out.println("pages: "+pages.getCurrentPageNumber());
         List<Novel> pageLists = novelDAO.queryNovelByPage(pages.getCurrentPageNumber(),pageSize,paramMap,conditionMap);
-        System.out.println(pageLists);
+        //System.out.println(pageLists);
         for (Novel novel : pageLists){
             if (novel != null)
                 novel.setAddTime(TimeUtils.parseTime(novel.getAddTime()));
         }
         pages.setPageLists(pageLists);
         SessionUtils.closeSession();
-        return null;
+        return pages;
     }
 
 }

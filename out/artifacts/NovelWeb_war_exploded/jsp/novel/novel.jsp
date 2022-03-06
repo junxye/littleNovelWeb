@@ -3,6 +3,7 @@
   User: Administrator
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
@@ -107,7 +108,7 @@
 <div class="container" style="background-color: #ffffff;" id="center">
     <div class="row margin-top thumbnail">
         <div class="col-md-3">
-            <img src="${pageContext.request.contextPath }/jsp/${novel.getImage() }" alt="书籍" class="book_img">
+            <img src="${pageContext.request.contextPath }/img/${novel.getImage() }" alt="书籍" class="book_img">
         </div>
         <div class="col-md-7 ">
             <span style="font-weight: 700;font-size: 30px;">${novel.getNovelName() }</span><br><br>

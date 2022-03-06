@@ -10,7 +10,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.apache.log4j.PropertyConfigurator;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -31,7 +30,6 @@ public class addNovelToShelf extends HttpServlet {
         int number = Integer.parseInt(_number);
         String _collectionTimes = request.getParameter("_collectionTimes");
         String _chapterNumber = request.getParameter("_chapterNumber");
-        //更新收藏数
         if(_collectionTimes!=null && !_collectionTimes.equals("")) {
             NovelServiceDAO novelServiceDAO = new NovelServiceMPL();
             Novel novel = new Novel();
@@ -48,11 +46,9 @@ public class addNovelToShelf extends HttpServlet {
         }
         if(_chapterNumber!=null && !_chapterNumber.equals("")) {
             int chapter_num = Integer.parseInt(_chapterNumber);
-            //跳转到BookContentServlet
-            response.sendRedirect("BookContentServlet?number="+number+"&chapter_num="+chapter_num);
+            response.sendRedirect("NovelContentRead?__number="+number+"&_chapterNumber="+chapter_num);
         }else {
-            //跳转到QueryBookServlet
-            response.sendRedirect("QueryBookServlet?number="+number);
+            response.sendRedirect("QueryNovel?__number="+number);
         }
     }
 

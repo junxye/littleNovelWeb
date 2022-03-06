@@ -9,12 +9,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.commons.beanutils.BeanUtils;
+import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
-import java.util.logging.Logger;
 
 @WebServlet("/LogIn")
 public class logIn extends HttpServlet {
@@ -30,7 +30,7 @@ public class logIn extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html; charset=UTF-8");
-        Logger log = Logger.getLogger(String.valueOf(logIn.class));
+        Logger log = Logger.getLogger(logIn.class);
         //PropertyConfigurator.configure("log4j.properties");
 
 

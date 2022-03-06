@@ -24,8 +24,8 @@ public class deleteUser extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
-        String _account = request.getParameter("_account");//点击了删除按钮
-        String[] _accounts = request.getParameterValues("selectBox");//删除所选中的
+        String _account = request.getParameter("_account");
+        String[] _accounts = request.getParameterValues("selectBox");
         UserServiceDAO us = new UserServiceMPL();
         if(_account!=null && _account.equals("")) {
             if(!us.deleteUser(_account)) {
@@ -41,7 +41,7 @@ public class deleteUser extends HttpServlet {
                 }
             }
         }
-        response.sendRedirect("queryUserByPage");
+        response.sendRedirect("QueryUserByPage");
     }
 
 }

@@ -28,9 +28,9 @@ public class deleteNovelFromShelf extends HttpServlet {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
         Logger log = Logger.getLogger(String.valueOf(deleteNovelFromShelf.class));
-        PropertyConfigurator.configure("message/log4j.properties");
-        String __number = request.getParameter("__number");//点击了删除按钮
-        String[] checkItem = request.getParameterValues("checkItem");//删除所选中的
+        //PropertyConfigurator.configure("log4j.properties");
+        String __number = request.getParameter("__number");
+        String[] checkItem = request.getParameterValues("checkItem");
         User user = (User)request.getSession().getAttribute("user");
         String _account = user.getAccount();
         ShelfServiceDAO sd = new ShelfServiceMPL();
@@ -50,7 +50,7 @@ public class deleteNovelFromShelf extends HttpServlet {
                 }
             }
         }
-        response.sendRedirect("queryNovelShelfByPage");
+        response.sendRedirect("QueryNovelShelfByPage");
     }
 
 }

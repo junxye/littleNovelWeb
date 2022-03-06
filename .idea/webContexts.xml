@@ -4,6 +4,7 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/web/jsp/shelf/novelShelf.jsp" value="file://$PROJECT_DIR$/web/jsp/shelf" />
+        <entry key="file://$PROJECT_DIR$/web/jsp/user/admin.jsp" value="file://$PROJECT_DIR$/web/jsp/user" />
         <entry key="file://$PROJECT_DIR$/web/jsp/user/index_1.jsp" value="file://$PROJECT_DIR$/web/jsp/user" />
         <entry key="file://$PROJECT_DIR$/web/jsp/user/login.jsp" value="file://$PROJECT_DIR$/web/jsp/user" />
         <entry key="file://$PROJECT_DIR$/web/jsp/user/register.jsp" value="file://$PROJECT_DIR$/web/jsp/user" />

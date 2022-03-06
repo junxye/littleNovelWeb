@@ -14,7 +14,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.apache.log4j.PropertyConfigurator;
 
 import java.io.IOException;
 import java.util.List;
@@ -30,7 +29,7 @@ public class novelContentRead extends HttpServlet {
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html; charset=UTF-8");
         Logger log = Logger.getLogger(String.valueOf(novelContentRead.class));
-        PropertyConfigurator.configure("log4j.properties");
+        //PropertyConfigurator.configure("log4j.properties");
         String __number = request.getParameter("__number");
         String _readTimes = request.getParameter("_readTimes");
         String _collectionTimes = request.getParameter("_collectionTimes");

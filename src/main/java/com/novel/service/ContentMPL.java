@@ -6,17 +6,17 @@ import com.novel.util.JDBCUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
-import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.Logger;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 public class ContentMPL implements NovelContentDAO {
 
     @Override
     public boolean queryNovelContentIsExist(int novelNumber) {
-        Logger log = Logger.getLogger(String.valueOf(ContentMPL.class));
+        Logger log = Logger.getLogger(ContentMPL.class);
         //PropertyConfigurator.configure("log4j.properties");
         QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
         try {
@@ -32,7 +32,7 @@ public class ContentMPL implements NovelContentDAO {
 
     @Override
     public NovelContent queryNovelContent(int novelNumber, int chapterNumber) {
-        Logger log = Logger.getLogger(String.valueOf(ContentMPL.class));
+        Logger log = Logger.getLogger(ContentMPL.class);
         //PropertyConfigurator.configure("log4j.properties");
         QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
         try {
@@ -46,7 +46,7 @@ public class ContentMPL implements NovelContentDAO {
 
     @Override
     public boolean addNovelContent(NovelContent novelContent) {
-        Logger log = Logger.getLogger(String.valueOf(ContentMPL.class));
+        Logger log = Logger.getLogger(ContentMPL.class);
         //PropertyConfigurator.configure("log4j.properties");
         QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
         try {
@@ -64,7 +64,7 @@ public class ContentMPL implements NovelContentDAO {
 
     @Override
     public int queryContentNumber(int _number) {
-        Logger log = Logger.getLogger(String.valueOf(ContentMPL.class));
+        Logger log = Logger.getLogger(ContentMPL.class);
         //PropertyConfigurator.configure("log4j.properties");
         QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
         try {
@@ -79,11 +79,17 @@ public class ContentMPL implements NovelContentDAO {
 
     @Override
     public List<NovelContent> queryNovelLog(int _number) {
-        Logger log = Logger.getLogger(String.valueOf(ContentMPL.class));
+        Logger log = Logger.getLogger(ContentMPL.class);
         //PropertyConfigurator.configure("log4j.properties");
         QueryRunner runner = new QueryRunner(JDBCUtils.getDataSource());
+        String sql = "SELECT chapterNumber,chapterName FROM novelcontent WHERE novelNumber = " + _number;
         try {
-            return (List<NovelContent>) runner.query("SELECT chapterNumber,chapterName FROM novelcontent WHERE novelNumber = ?", new BeanHandler<List>(List.class), _number);
+            List<NovelContent> list = new ArrayList<NovelContent>();
+            for (int i = 0; i < queryContentNumber(_number); i++){
+                String s = sql + " LIMIT " + 1 + " OFFSET " + i;
+                list.add(runner.query(s, new BeanHandler<NovelContent>(NovelContent.class)));
+            }
+            return list;
         } catch (SQLException e) {
             e.printStackTrace();
             log.info("Return chapter menu error. "+e.getMessage());

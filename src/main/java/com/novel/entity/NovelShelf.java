@@ -6,6 +6,7 @@ public class NovelShelf {
     private int novelNumber;
     private String account; //收入书架的账户
     private String time;    //收藏时间
+    private String novelName;
 
     private Novel novel;
 
@@ -58,10 +59,18 @@ public class NovelShelf {
         this.novel = novel;
     }
 
+    public String getNovelName() {
+        return novelName;
+    }
+
+    public void setNovelName(String novelName) {
+        this.novelName = novelName;
+    }
+
     @Override
     public String toString(){
         return "BookShelf [shelfId=" + shelfId + ", novelNumber=" + novelNumber
-                + ", account=" + account + ", time=" + time + "]";
+                + ", novelName=" + novelName + ", account=" + account + ", time=" + time + "]";
     }
 
 }

@@ -3,6 +3,7 @@
   User: Administrator
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
@@ -35,7 +36,7 @@
 
         var ageMess = "";
         window.onload = function() {
-            _age = document.getElementById("uage");
+            _age = document.getElementById("age");
 
         }
         function checkForm() {          //验证表单
@@ -60,7 +61,6 @@
     <div class="row">
         <div class="col-md-4">
             <div class="top1" style="margin-top: 12px; margin-left: 0px; height: 48px;">
-                <button class="btn btn-default author" type="button">欢迎您来到书酷</button>
                 <a class="btn" href="javascript:void(0);" role="button"><span style="font-weight: 700;font-size: 20px;">${user.getAccount() }</span></a>
                 <a class="btn" href="${pageContext.request.contextPath}/LogOut" role="button"><span style="font-weight: 700;font-size: 20px;">注销</span></a>
             </div>
@@ -80,12 +80,13 @@
                         <li><a href="${pageContext.request.contextPath}/NovelRank">排行</a></li>
                         <li><a href="${pageContext.request.contextPath}/QueryNovelShelfByPage">书架</a></li>
                         <li class="active"><a href="${pageContext.request.contextPath}/QueryUser">个人信息</a></li>
-                        <li><a href="#">留言</a></li>
+                        <li>
                         <c:if test="${user.getAccount() == 'admin'}">
                             <li>
                                 <a href="${pageContext.request.contextPath}/QueryUserByPage">管理员界面</a>
                             </li>
                         </c:if>
+                        </li>
                     </ul>
                     <!-- 搜索框 -->
                     <form class="navbar-form navbar-right" action="${pageContext.request.contextPath}/QueryNovelByPage" method="post">
@@ -105,15 +106,15 @@
         <div class="col-xs-4 col-md-5 col-center-block">
             <div class="same">
                 <label for="um">账号</label>
-                <input id="um" name="_account" type="text" value="${u.getAccount() }" readonly>
+                <input id="um" name="account" type="text" value="${u.getAccount() }" readonly>
             </div>
             <div class="same">
                 <%--@declare id="meal"--%><label for="meal">性别</label>
-                <c:if test="${u.getUsex() =='男'}">
+                <c:if test="${u.getSex() =='男'}">
                     <input id="male" type="radio" name="sex" value="男" checked="checked"><label for="male" class="label_1">男</label>
                     <input id="female" type="radio" name="sex" value="女"><label for="female" class="label_1">女</label>
                 </c:if>
-                <c:if test="${u.getUsex() =='女'}">
+                <c:if test="${u.getSex() =='女'}">
                     <input id="male" type="radio" name="sex" value="男"><label for="male" class="label_1">男</label>
                     <input id="female" type="radio" name="sex" value="女" checked="checked"><label for="female" class="label_1">女</label>
                 </c:if>

@@ -1,15 +1,16 @@
 package com.novel.util;
 
+import org.apache.log4j.Logger;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.Logger;
 
 public class TimeUtils {
 
     public static String parseTime(String time) {
         String formatTime = null;
-        Logger log = Logger.getLogger(String.valueOf(TimeUtils.class));
+        Logger log = Logger.getLogger(TimeUtils.class);
         //PropertyConfigurator.configure("log4j.properties");
         try {
             //System.out.println(time);
